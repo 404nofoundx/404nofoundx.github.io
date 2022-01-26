@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><meta name="baidu-site-verification" content="code-Um7dmQVTiB"><title>某音5神学习分析 - ZRocket</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="ZRocket"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="ZRocket"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="某音引以为傲的5神到底内部到底是何等构成"><meta property="og:type" content="blog"><meta property="og:title" content="ZRocket"><meta property="og:url" content="http://www.404nofoundx.top/20220125/%E6%9F%90%E9%9F%B35%E7%A5%9E%E5%AD%A6%E4%B9%A0%E5%88%86%E6%9E%90/"><meta property="og:site_name" content="ZRocket"><meta property="og:description" content="某音引以为傲的5神到底内部到底是何等构成"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://gitee.com/nofound404/image-cloud/raw/master/安卓逆向.png"><meta property="article:published_time" content="2022-01-25T07:13:09.000Z"><meta property="article:modified_time" content="2022-01-25T07:25:28.922Z"><meta property="article:author" content="ZRocket"><meta property="article:tag" content="安卓逆向"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://gitee.com/nofound404/image-cloud/raw/master/安卓逆向.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.404nofoundx.top/20220125/%E6%9F%90%E9%9F%B35%E7%A5%9E%E5%AD%A6%E4%B9%A0%E5%88%86%E6%9E%90/"},"headline":"某音5神学习分析","image":["https://gitee.com/nofound404/image-cloud/raw/master/安卓逆向.png"],"datePublished":"2022-01-25T07:13:09.000Z","dateModified":"2022-01-25T07:25:28.922Z","author":{"@type":"Person","name":"Zhan"},"publisher":{"@type":"Organization","name":"ZRocket","logo":{"@type":"ImageObject","url":{"text":"ZRocket"}}},"description":"某音引以为傲的5神到底内部到底是何等构成"}</script><link rel="canonical" href="http://www.404nofoundx.top/20220125/%E6%9F%90%E9%9F%B35%E7%A5%9E%E5%AD%A6%E4%B9%A0%E5%88%86%E6%9E%90/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><script>var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?52c041fd9882a2d4b05bb16f933cdf75";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">ZRocket</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/404nofoundx"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><h1 class="title is-3 is-size-4-mobile">某音5神学习分析</h1><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><i class="far fa-calendar-alt"> </i><time dateTime="${date_xml(page.date)}" title="${date_xml(page.date)}">2022-01-25</time></span><span class="level-item is-hidden-mobile"><i class="far fa-calendar-check"> </i><time dateTime="${date_xml(page.updated)}" title="${date_xml(page.updated)}">2022-01-25</time></span><span class="level-item"><a class="link-muted" href="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/">安卓逆向</a></span><span class="level-item">6 分钟读完 (大约916个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><div class="content"><blockquote>
+<p>转自：<a target="_blank" rel="noopener" href="https://bbs.pediy.com/thread-269025.htm">https://bbs.pediy.com/thread-269025.htm</a></p>
+</blockquote>
+<p>首先吐槽一下某音的更新速度,简直是不要命一样 最短是两天一个小版本,并且吧所有算法秘钥都更新了一遍。</p>
+<p>本文全篇以15版本为例,因为老版本的双神走的是XLOG接口,因为年代久远所以就不探讨了(其实也不远,就是抖音更新太快了,一个月多月一个大版本谁能跟的起)</p>
+<p>搞逆向的朋友都知道,某音的算法自从最老版本的双神,成功的进阶为5神,但是最近看了17版本好像吧 X-tyhon给整掉了,并且之前的Mssdk 包好像也找不到了.</p>
+<p>所谓的5神 由最早引入的 x-gorgon x-khronos 到后来版本的 x-argus x-ladon x-tyhon 命名规则是古希腊神话中的妖魔鬼怪 当然在分析5神 “libmetasec_ml.so”的时候发现了一个官方diss </p>
+<p><img src="https://gitee.com/nofound404/image-cloud/raw/master/1629738004779.png"></p>
+<p>位没看错,官方DISS 最为致命,导致玻璃心的我当场崩溃 决定把它干翻看看他这馋人的内部到底是什么样子</p>
+<p>在大部分时间都是在处理ollvm跟vmp 这种东西枯燥无味就不展开讲了 直接上干货</p>
+<p>5神 其中四神都是依赖于x-khronos 的时间戳加密算出来的结果.并且x-argus x-ladon x-tyhon 属于对称加密,导致某音可以直接反解拿到明文,让人十分头大</p>
+<h2 id="X-Gorgon"><a href="#X-Gorgon" class="headerlink" title="X-Gorgon"></a>X-Gorgon</h2><p>抖音自定义算法加密 由(URL+header[x-common-params-v2]的MD5)+(X-SS-STUB)+(x-khronos)+(版本号15.1为0124)组成的20字节的byte加密而成</p>
+<p>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0404 c0f10000 d11b879564199a8b8f28972c175c50b88551add7</span><br></pre></td></tr></table></figure>
+
+<p>0404是固定代表算法版本 后八位是4个byte的随机key 而最后的40位就是加密后的byte类型. 所以如果你有算法并且你抓包拿到了随机key 那么你就能算的跟真机算出的结果一样。</p>
+<h2 id="X-Khronos"><a href="#X-Khronos" class="headerlink" title="X-Khronos"></a>X-Khronos</h2><p>毋庸置疑 时间戳 并且神中的时间戳都是由他而来</p>
+<h2 id="X-Ladon"><a href="#X-Ladon" class="headerlink" title="X-Ladon"></a>X-Ladon</h2><p>这个神其实就是由(x-khronos+(-1588093228-1128)) 加密而来 秘钥就是解出base64的前4位+”1128”的MD5 ,如果不信可以用frida hook一下</p>
+<p><img src="https://gitee.com/nofound404/image-cloud/raw/master/1629738005355.png"></p>
+<p>这样你就会神奇的发现,每次解出base64的前4位都神奇的变成了78563412</p>
+<h2 id="X-Tyhon"><a href="#X-Tyhon" class="headerlink" title="X-Tyhon"></a>X-Tyhon</h2><p>这个东西你用刚才的frida脚本hook一下的话,你也会神奇的发现 他的秘钥是base64解密后的前两位跟后两位 而他的作用呢就是加密MSSDK返回来的一个token,好像17版本直接没了这个神. 也是你这东西能校验得浪费多大的算力.你得保存多少token</p>
+<h2 id="X-Argus"><a href="#X-Argus" class="headerlink" title="X-Argus"></a>X-Argus</h2><p>其实我知道,大家其实最关心的是这个神,古希腊神话中的百眼巨人,貌似能看穿一切,而且看他的长度,大家也知道他是最牛的神了.</p>
+<p>直接说结果,这个东西解密完就是个protobuf 但是这个神用到了多重加密,跟mssdk的5重加密bqq的三重加密有的一拼 </p>
+<p>主要用SM3算法计算了你url跟X-SS-STUB  然后把你的deviceID ktoken跟时间戳也放到了protobuf里,所以大家不能用真机hook的方式哦,会被抓到滴</p>
+<p>当然如果你登录了他还会在protobuf里增加了一个</p>
+<h2 id="xbdlanusk"><a href="#xbdlanusk" class="headerlink" title="xbdlanusk"></a>xbdlanusk</h2><p>这个值是登录smslogin返回的哦,代表你的个人信息! 所以千万不能用hook的方式哦</p>
+<p><img src="https://gitee.com/nofound404/image-cloud/raw/master/1629738005883.jpg"></p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/">安卓逆向</a></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/img/wechat.png" alt="微信"></span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/img/alipay.png" alt="支付宝"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/20220126/%E5%AF%86%E7%A0%81%E5%AD%A6-MD5%E4%BF%A1%E6%81%AF%E6%91%98%E8%A6%81%E7%AE%97%E6%B3%95/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">密码学 MD5信息摘要算法</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/20220119/%E6%9F%90%E5%87%B0%E6%96%B0%E9%97%BB-sn/"><span class="level-item">安卓逆向 | 某新闻类APP sn</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="content" id="waline-thread"></div><script src="https://cdn.jsdelivr.net/npm/@waline/client@1.3.1/dist/Waline.min.js"></script><script>Waline({
+            el: '#waline-thread',
+            serverURL: "https://blog-api-ab4zca1le-404nofoundx.vercel.app/",
+            lang: "zh-CN",
+            visitor: false,
+            emoji: ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],
+            dark: "auto",
+            meta: ["nick","mail"],
+            requiredMeta: [],
+            login: "enable",
+            avatar: "mp",
+            
+            pageSize: 10,
+            avatarCDN: "https://sdn.geekzu.org/avatar/",
+            avatarForce: false,
+            highlight: true,
+            mathTagSupport: false,
+            copyright: true,
+            locale: {"placeholder":"Comment here..."},
+        });</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/avatar.png" alt="Zhan"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Zhan</p><p class="is-size-6 is-block">爬虫工程师</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>BeiJing</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">38</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">8</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">10</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/404nofoundx" target="_blank" rel="noopener">关注我</a></div></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#X-Gorgon"><span class="level-left"><span class="level-item">X-Gorgon</span></span></a></li><li><a class="level is-mobile" href="#X-Khronos"><span class="level-left"><span class="level-item">X-Khronos</span></span></a></li><li><a class="level is-mobile" href="#X-Ladon"><span class="level-left"><span class="level-item">X-Ladon</span></span></a></li><li><a class="level is-mobile" href="#X-Tyhon"><span class="level-left"><span class="level-item">X-Tyhon</span></span></a></li><li><a class="level is-mobile" href="#X-Argus"><span class="level-left"><span class="level-item">X-Argus</span></span></a></li><li><a class="level is-mobile" href="#xbdlanusk"><span class="level-left"><span class="level-item">xbdlanusk</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">ZRocket</a><p class="is-size-7"><span>&copy; 2022</span>  Zhan  ♡  RR<br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客, <span id="busuanzi_value_site_pv">0</span>次访问</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://blog.csdn.net/qq_41179280?spm=1000.2115.3001.5343"><i class="fab fa-weibo"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://blog.csdn.net/qq_41179280?spm=1000.2115.3001.5343"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/404nofoundx"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script type="text/javascript" src="/js/love.js"></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
